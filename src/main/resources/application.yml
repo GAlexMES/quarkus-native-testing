@@ -1,0 +1,13 @@
+quarkus:
+  native:
+    additional-build-args:
+      - "-Dorg.jboss.logging.provider=slf4j"
+
+  log:
+    level: INFO
+    category:
+      "com.testing":
+        level: DEBUG
+
+  test:
+    native-image-profile: test
