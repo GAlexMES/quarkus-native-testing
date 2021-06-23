@@ -8,6 +8,7 @@ import org.jboss.logging.Logger;
 public class Main {
     private static final Logger LOG = Logger.getLogger(Main.class);
     public static void main(String... args) {
+        LOG.info("starting");
         Quarkus.run(args);
     }
 }

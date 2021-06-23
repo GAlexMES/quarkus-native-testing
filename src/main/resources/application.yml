@@ -1,5 +1,7 @@
 quarkus:
   native:
+    resources:
+      includes: META-INF/services/org.slf4j.spi.SLF4JServiceProvider
     additional-build-args:
       - "-Dorg.jboss.logging.provider=slf4j"
 

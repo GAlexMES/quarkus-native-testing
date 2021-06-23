@@ -27,11 +27,14 @@ configurations.all {
 
 dependencies {
     implementation(enforcedPlatform("${quarkusPlatformGroupId}:${quarkusPlatformArtifactId}:${quarkusPlatformVersion}"))
-    implementation("io.quarkus:quarkus-resteasy")
-    implementation("io.quarkus:quarkus-resteasy-jsonb")
 
     // YAML configuration
     implementation("io.quarkus:quarkus-config-yaml")
+
+    implementation("ch.qos.logback:logback-classic:1.3.0-alpha4")
+    runtimeOnly("org.slf4j:slf4j-api:2.0.0-alpha1")
+    implementation("org.codehaus.janino:janino:3.1.2")
+
 
     // Testing
     testImplementation("io.quarkus:quarkus-junit5")
